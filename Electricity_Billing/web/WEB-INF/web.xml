@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.0" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+    <display-name>Testing</display-name>
+    <welcome-file-list>
+        <!--        <welcome-file>Testing.jsp</welcome-file>-->
+         <welcome-file>Login.jsp</welcome-file>
+        <welcome-file>FileUpLoading.jsp</welcome-file>
+        <welcome-file>index.jsp</welcome-file>
+       
+    </welcome-file-list>
+    <servlet>
+        <servlet-name>Controler</servlet-name>
+        <servlet-class>Test.Form.Servlet.Controler</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>BillTypeServletControl</servlet-name>
+        <servlet-class>Test.Form.Servlet.BillTypeServletControl</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>SendEmail</servlet-name>
+        <servlet-class>Test.Form.Servlet.SendEmail</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>UploadFile</servlet-name>
+        <servlet-class>Test.Form.Servlet.UploadFile</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ServletPDF</servlet-name>
+        <servlet-class>Test.Form.Servlet.ServletPDF</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Controler</servlet-name>
+        <url-pattern>/aa</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>insertBillingServlet</servlet-name>
+        <servlet-class>Test.Form.Servlet.insertBillingServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>insertBillingServlet</servlet-name>
+        <url-pattern>/insert</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>BillTypeServletControl</servlet-name>
+        <url-pattern>/BillTypeServletControl</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SendEmail</servlet-name>
+        <url-pattern>/SendEmail</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>UploadFile</servlet-name>
+        <url-pattern>/UploadFile</url-pattern>
+    </servlet-mapping>
+    <context-param>
+        <description>Location to store uploaded file</description>
+        <param-name>file-upload</param-name>
+        <param-value>f:\\new\</param-value>
+    </context-param>
+    <servlet-mapping>
+        <servlet-name>ServletPDF</servlet-name>
+        <url-pattern>/ServletPDF</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+</web-app>
